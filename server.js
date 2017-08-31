@@ -158,8 +158,8 @@ app.get('/api/analysis/teachers/:uid', function(req,res){
 
 
 
-server.listen(3000, function(){
-  console.log('runnin on 3000')
+server.listen(8080, function(){
+  console.log('runnin on 8080')
 });
 
 require('./Signaling-Server.js')(server);
