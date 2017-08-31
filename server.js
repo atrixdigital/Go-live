@@ -1,5 +1,5 @@
 var fs = require('fs');
-
+var PORT = process.env.PORT || 8080;
 var options = {
     key: fs.readFileSync('fake-keys/privatekey.pem'),
     cert: fs.readFileSync('fake-keys/certificate.pem')
@@ -158,8 +158,8 @@ app.get('/api/analysis/teachers/:uid', function(req,res){
 
 
 
-server.listen(8080, function(){
-  console.log('runnin on 8080')
+server.listen(PORT, function(){
+  console.log('runnin on '+ PORT)
 });
 
 require('./Signaling-Server.js')(server);

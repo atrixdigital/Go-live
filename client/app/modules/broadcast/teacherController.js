@@ -28,7 +28,7 @@ $scope.chatEnabled = false;
                 oneway: true
                  };
             connection.sdpConstraints.mandotory = {
-            	OfferToReceiveAudio:true,
+            	OfferToReceiveAudio:false,
             	OfferToReceiveVideo:true
             };
                  var local = angular.element(document.getElementById('local-container'));
@@ -47,13 +47,13 @@ $scope.chatEnabled = false;
                 });
             };
             connection.onstream = function(event){
-            	if(event.type === 'remote'){
-            		remote.append(event.mediaElement);
-                $scope.hidex = true;
-            	}
+            
             	if(event.type === 'local'){
-            		local.append(event.mediaElement);
-            	}
+                    local.append(event.mediaElement);
+                }
+                
+        
+                
             
              }
 
@@ -89,11 +89,15 @@ $scope.setroomId = function(){
                 
           
         }
-
-
 $scope.leaveRoom = function(){
-	connection.disconnectWith($scope.roomId);
-	//connection.streams.stop('remote');
+    connection.disconnectWith($scope.roomId);
+   // $scope.stopStream ='stop';
+    console.log('stop'+$scope.rId);
+    local.innerHTML = '';
+    local.empty();
+    $scope.rId = '';   
+
+	// connection.streams.stop('local');
 	$scope.openRoomBtn = !$scope.openRoomBtn;
 
 }
