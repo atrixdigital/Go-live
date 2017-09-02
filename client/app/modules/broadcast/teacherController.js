@@ -1,5 +1,5 @@
 
-app.controller('teacherCtrl', function ($scope,$route,$firebaseArray,$location,$rootScope,$http,$routeParams,$document,$firebaseObject){
+app.controller('teacherCtrl', function ($scope,$route,$location,$rootScope,$http,$routeParams,$document){
 
 var vm =this;
 $scope.hidex = false;

@@ -1,4 +1,4 @@
-var app = angular.module('myApp', ['firebase','LocalStorageModule','ngRoute','ngAnimate','ui.bootstrap']);
+var app = angular.module('myApp', ['LocalStorageModule','ngRoute','ngAnimate','ui.bootstrap']);
 
 
 app.run(function ($rootScope,$location) {

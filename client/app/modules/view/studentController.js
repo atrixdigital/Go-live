@@ -1,5 +1,5 @@
 
-app.controller('studentCtrl', function ($scope,$rootScope,$http,$location,$firebaseArray,$routeParams,$document,$firebaseObject){
+app.controller('studentCtrl', function ($scope,$rootScope,$http,$location,$routeParams,$document){
 
 
 $scope.hidex = false;
@@ -27,13 +27,7 @@ $scope.chatEnabled = false;
 
 console.log($scope.roomId);
 
-// var chatRef= db.child('rooms').child($scope.roomId).child('messages');
-// $scope.messages = $firebaseArray(chatRef);
-
-            // by default, socket.io server is assumed to be deployed on your own URL
-           // connection.socketURL = 'https://localhost:8080/';
-
-            // comment-out below line if you do not have your own socket.io server
+    // comment-out below line if you do not have your own socket.io server
             connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
 
             connection.socketMessageEvent = 'audio-plus-screen-sharing-demo';
