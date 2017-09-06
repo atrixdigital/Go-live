@@ -107,12 +107,12 @@ video{
 }
 
 </style>
-        <section class="main-panel text-center">
+        <section class="text-center">
             <div class="make-center">
             <h2>Join Broadcast </h2>
             <div ng-disabled="hidex">
-             <input  type="text" ng-model="rId" >
-             <button class="btn btn-primary" ng-disabled="joinRoomBtn" ng-click="joinRoom()">Join Broadcast</button>
+             <input  type="hidden" ng-model="rId" >
+             <button class="btn btn-primary" ng-disabled="joinRoomBtn" ng-hide="hideme" ng-click="joinRoom('123')">Join Broadcast</button>
             <!--  <button class="btn btn-danger" ng-disabled="!joinRoomBtn" ng-click="leaveRoom()">Leave Class </button> -->
              </div>
            <!--    <button class="btn btn-danger" ng-disabled="!openRoomBtn" ng-click="replaceScreen()">Enable screen </button> -->

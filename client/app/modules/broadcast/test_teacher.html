@@ -105,12 +105,12 @@ video{
 }
 
 </style>
-        <section class="main-panel text-center">
+        <section class="text-center">
             <div class="make-center">
                 <h2>Go Live! </h2>
                 
-             <input  type="text" ng-model="rId">
-             <button class="btn btn-primary" ng-disabled="openRoomBtn" ng-click="openRoom()">go  Live</button>
+             <input  type="hidden" ng-model="rId">
+             <button class="btn btn-primary" ng-disabled="openRoomBtn" ng-click="openRoom('123')">Start</button>
              <button class="btn btn-danger" ng-disabled="!openRoomBtn" ng-click="leaveRoom()">Stop </button>
              </div>
             <!--   <button class="btn btn-danger" ng-disabled="!openRoomBtn" ng-click="replaceScreen()">Enable screen </button> -->

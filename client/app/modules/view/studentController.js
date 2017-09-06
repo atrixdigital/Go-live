@@ -70,7 +70,7 @@ console.log($scope.roomId);
 
 
            //once stream has started and connection is estalbished.
-       
+       $scope.hideme = false;
 
             var afterJoining = function(){
                    $scope.chatEnabler = true;
@@ -78,8 +78,9 @@ console.log($scope.roomId);
                              console.log('roomid is '+$scope.roomId);
                              
                            }
-             $scope.joinRoom = function(){
-                  $scope.roomId = $scope.rId;
+             $scope.joinRoom = function(id){
+                  $scope.roomId = id;
+                  $scope.hideme = true;
             connection.checkPresence($scope.roomId, function(isRoomExist, roomid) {
              if (isRoomExist === true) {
                  connection.join($scope.roomId);

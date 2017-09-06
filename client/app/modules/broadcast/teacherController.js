@@ -1,5 +1,5 @@
 
-app.controller('teacherCtrl', function ($scope,$route,$location,$rootScope,$http,$routeParams,$document){
+app.controller('teacherCtrl', function ($scope,$route,$location,$rootScope,$http,$routeParams,$document,$window){
 
 var vm =this;
 $scope.hidex = false;
@@ -77,9 +77,9 @@ $scope.setroomId = function(){
 
             }            
 //open a room 
-            $scope.openRoom = function(){
-              if($scope.rId){
-                              $scope.roomId = $scope.rId;
+            $scope.openRoom = function(id){
+              if(id){
+                              $scope.roomId = id;
 
               }
               console.log('final roomId , starting room with' +$scope.roomId)
@@ -91,6 +91,7 @@ $scope.setroomId = function(){
         }
 $scope.leaveRoom = function(){
     connection.disconnectWith($scope.roomId);
+    $window.location.reload();
    // $scope.stopStream ='stop';
     console.log('stop'+$scope.rId);
     local.innerHTML = '';
