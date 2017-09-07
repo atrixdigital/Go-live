@@ -67,9 +67,7 @@ console.log($scope.roomId);
             
              }
 
-
-
-           //once stream has started and connection is estalbished.
+         //once stream has started and connection is estalbished.
        $scope.hideme = false;
 
             var afterJoining = function(){

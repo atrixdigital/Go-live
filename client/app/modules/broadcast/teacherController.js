@@ -69,9 +69,9 @@ $scope.setroomId = function(){
 
 
             var afterStarting= function(){
-                             $scope.chatEnabler = true;
-                             $scope.openRoomBtn = true;
-                             console.log('roomid is '+$scope.roomId);
+                $scope.chatEnabler = true;
+                $scope.openRoomBtn = true;
+                console.log('roomid is '+$scope.roomId);
                             
 
 
